@@ -18,6 +18,7 @@ export async function POST(
     const { userId } = auth();
     const body = await req.json();
     const { messages  } = body;
+    console.log(userId, body, messages, openai), configuration;
 
     if (!userId) {
       return new NextResponse("Unauthorized", { status: 401 });
@@ -40,7 +41,8 @@ export async function POST(
 
     const response = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
-      messages
+      messages,
+      
     });
 
     if (!isPro) {
@@ -48,8 +50,15 @@ export async function POST(
     }
 
     return NextResponse.json(response.data.choices[0].message);
-  } catch (error) {
+  } catch (error: any) {
+
+    if (error.response) {
+      console.log(error.response.status);
+      console.log(error.response.data);
+    } else {
+      console.log(error.message);
+    }
     console.log('[CONVERSATION_ERROR]', error);
-    return new NextResponse("Internal Error", { status: 500 });
+    return new NextResponse("Internal Error", { status: 500, });
   }
 };

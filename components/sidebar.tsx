@@ -19,37 +19,37 @@ const routes = [
     color: "text-sky-500"
   },
   {
-    label: 'Conversation',
+    label: 'Chat',
     icon: MessageSquare,
     href: '/conversation',
     color: "text-violet-500",
   },
   {
-    label: 'Image Generation',
+    label: 'Gerador de imagem',
     icon: ImageIcon,
     color: "text-pink-700",
     href: '/image',
   },
   {
-    label: 'Video Generation',
+    label: 'Gerador de video',
     icon: VideoIcon,
     color: "text-orange-700",
     href: '/video',
   },
   {
-    label: 'Music Generation',
+    label: 'Gerador de música',
     icon: Music,
     color: "text-emerald-500",
     href: '/music',
   },
   {
-    label: 'Code Generation',
+    label: 'Gerador de código',
     icon: Code,
     color: "text-green-700",
     href: '/code',
   },
   {
-    label: 'Settings',
+    label: 'Configurações',
     icon: Settings,
     href: '/settings',
   },

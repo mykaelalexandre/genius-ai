@@ -39,15 +39,17 @@ const CodePage = () => {
   const isLoading = form.formState.isSubmitting;
   
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    console.log(values, 'values')
     try {
       const userMessage: ChatCompletionRequestMessage = { role: "user", content: values.prompt };
       const newMessages = [...messages, userMessage];
-      
       const response = await axios.post('/api/code', { messages: newMessages });
       setMessages((current) => [...current, userMessage, response.data]);
       
       form.reset();
     } catch (error: any) {
+      console.log(error, 'error')
+
       if (error?.response?.status === 403) {
         proModal.onOpen();
       } else {
