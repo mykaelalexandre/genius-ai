@@ -1,6 +1,6 @@
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
-import { Configuration, OpenAIApi } from "openai";
+import { Configuration, OpenAIApi, ChatCompletionRequestMessage } from "openai";
 
 import { checkSubscription } from "@/lib/subscription";
 import { incrementApiLimit, checkApiLimit } from "@/lib/api-limit";
@@ -10,6 +10,10 @@ const configuration = new Configuration({
 });
 
 const openai = new OpenAIApi(configuration);
+const instructionMessage: ChatCompletionRequestMessage = {
+  role: "system",
+  content: "Você é um chatbot. Você deve responder as perguntas baseadas em seu banco de dados de acordo com o cenário passado."
+};
 
 export async function POST(
   req: Request
@@ -40,7 +44,7 @@ export async function POST(
 
     const response = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
-      messages,
+      messages: [instructionMessage, ...messages],
       
     });
 
