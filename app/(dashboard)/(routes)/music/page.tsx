@@ -55,7 +55,7 @@ const MusicPage = () => {
   return ( 
     <div>
       <Heading
-        title="Music Generation"
+        title="Music Generation (Em manutenção)"
         description="Turn your prompt into music."
         icon={Music}
         iconColor="text-emerald-500"
@@ -85,7 +85,7 @@ const MusicPage = () => {
                   <FormControl className="m-0 p-0">
                     <Input
                       className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
-                      disabled={isLoading} 
+                      disabled={true} 
                       placeholder="Piano solo" 
                       {...field}
                     />
@@ -93,7 +93,7 @@ const MusicPage = () => {
                 </FormItem>
               )}
             />
-            <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
+            <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={true} size="icon">
               Generate
             </Button>
           </form>

@@ -55,7 +55,7 @@ const VideoPage = () => {
   return ( 
     <div>
       <Heading
-        title="Video Generation"
+        title="Video Generation (Em manutenção)"
         description="Turn your prompt into video."
         icon={FileAudio}
         iconColor="text-orange-700"
@@ -85,7 +85,7 @@ const VideoPage = () => {
                   <FormControl className="m-0 p-0">
                     <Input
                       className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
-                      disabled={isLoading} 
+                      disabled={true} 
                       placeholder="Clown fish swimming in a coral reef" 
                       {...field}
                     />
@@ -93,7 +93,7 @@ const VideoPage = () => {
                 </FormItem>
               )}
             />
-            <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
+            <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={true} size="icon">
               Generate
             </Button>
           </form>
