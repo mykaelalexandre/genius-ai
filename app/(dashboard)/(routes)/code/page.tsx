@@ -8,8 +8,6 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";
 import ReactMarkdown from "react-markdown";
 import { useRouter } from "next/navigation";
-import { ChatCompletionRequestMessage } from "openai";
-
 import { BotAvatar } from "@/components/bot-avatar";
 import { Heading } from "@/components/heading";
 import { Button } from "@/components/ui/button";
@@ -23,6 +21,12 @@ import { Empty } from "@/components/ui/empty";
 import { useProModal } from "@/hooks/use-pro-modal";
 
 import { formSchema } from "./constants";
+
+interface ChatCompletionRequestMessage {
+  role: 'user' | 'assistant' | 'system';
+  content: string;
+  name?: string;
+}
 
 const CodePage = () => {
   const router = useRouter();
