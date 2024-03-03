@@ -15,10 +15,10 @@ export default function HomePage() {
     <div>
       <div className="mb-8 space-y-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center">
-          Explore o poder da IA
+        Plataforma de Estudo Bíblico com IA
         </h2>
         <p className="text-muted-foreground font-light text-sm md:text-lg text-center">
-          Converse com a melhor IA - Explore o poder da IA
+          Aprenda mais com a melhor IA
         </p>
       </div>
       <div className="px-4 md:px-20 lg:px-32 space-y-4">

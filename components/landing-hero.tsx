@@ -17,10 +17,7 @@ export const LandingHero = () => {
           <TypewriterComponent
             options={{
               strings: [
-                "Chatbot.",
-                "Photo Generation.",
-                "Blog Writing.",
-                "Mail Writing."
+                "Estudo da Bíblia", "Compreensão das Escrituras", "Crescimento espiritual",  "Conexão com Deus", "Reflexão diária", "Aprofundamento na fé", "Sabedoria divina", 'Revelação da Palavra', 
               ],
               autoStart: true,
               loop: true,
@@ -29,7 +26,7 @@ export const LandingHero = () => {
         </div>
       </div>
       <div className="text-sm md:text-xl font-light text-zinc-400">
-Crie conteúdo utilizando a inteligência artificial 10 vezes mais rápido.
+      Transforme seu estudo bíblico com a IA que potencializa seu aprendizado em tempo recorde!
       </div>
       <div>
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>

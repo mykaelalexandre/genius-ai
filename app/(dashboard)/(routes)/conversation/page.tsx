@@ -66,7 +66,7 @@ const ConversationPage = () => {
     <div>
       <Heading
         title="Chat"
-        description="Our most advanced conversation model."
+        description="Tranforme suas dúvidas em respostas"
         icon={MessageSquare}
         iconColor="text-violet-500"
         bgColor="bg-violet-500/10"
@@ -97,7 +97,7 @@ const ConversationPage = () => {
                       <Input
                         className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                         disabled={isLoading} 
-                        placeholder="How do I calculate the radius of a circle?" 
+                        placeholder="O que a bíblia diz em Josué 1:19?" 
                         {...field}
                       />
                     </FormControl>
@@ -117,7 +117,7 @@ const ConversationPage = () => {
             </div>
           )}
           {messages.length === 0 && !isLoading && (
-            <Empty label="No conversation started." />
+            <Empty label="Nenhuma conversa iniciada" />
           )}
           <div className="flex flex-col-reverse gap-y-4">
             {messages.map((message) => (

@@ -30,24 +30,24 @@ const routes = [
     color: "text-pink-700",
     href: '/image',
   },
-  {
-    label: 'Gerador de video',
-    icon: VideoIcon,
-    color: "text-orange-700",
-    href: '/video',
-  },
-  {
-    label: 'Gerador de música',
-    icon: Music,
-    color: "text-emerald-500",
-    href: '/music',
-  },
-  {
-    label: 'Gerador de código',
-    icon: Code,
-    color: "text-green-700",
-    href: '/code',
-  },
+  //{
+  //   label: 'Gerador de video',
+  //   icon: VideoIcon,
+  //   color: "text-orange-700",
+  //   href: '/video',
+  // },
+  // {
+  //   label: 'Gerador de música',
+  //   icon: Music,
+  //   color: "text-emerald-500",
+  //   href: '/music',
+  // },
+  // {
+  //   label: 'Gerador de código',
+  //   icon: Code,
+  //   color: "text-green-700",
+  //   href: '/code',
+  // },
   {
     label: 'Configurações',
     icon: Settings,
