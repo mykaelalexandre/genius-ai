@@ -45,7 +45,7 @@ const MusicPage = () => {
       if (error?.response?.status === 403) {
         proModal.onOpen();
       } else {
-        toast.error("Something went wrong.");
+        toast.error("Algo deu errado");
       }
     } finally {
       router.refresh();
@@ -56,7 +56,7 @@ const MusicPage = () => {
     <div>
       <Heading
         title="Music Generation (Em manutenção)"
-        description="Turn your prompt into music."
+        description="Transforme suas ideias em música."
         icon={Music}
         iconColor="text-emerald-500"
         bgColor="bg-emerald-500/10"
@@ -94,7 +94,7 @@ const MusicPage = () => {
               )}
             />
             <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={true} size="icon">
-              Generate
+              Gerar
             </Button>
           </form>
         </Form>

@@ -23,7 +23,7 @@ export default async function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="pt-br" suppressHydrationWarning>
         <head>
           <script
             dangerouslySetInnerHTML={{

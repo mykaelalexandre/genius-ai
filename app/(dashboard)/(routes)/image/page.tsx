@@ -51,7 +51,7 @@ const PhotoPage = () => {
       if (error?.response?.status === 403) {
         proModal.onOpen();
       } else {
-        toast.error("Something went wrong.");
+        toast.error("Algo deu errado");
       }
     } finally {
       router.refresh();
@@ -62,7 +62,7 @@ const PhotoPage = () => {
     <div>
       <Heading
         title="Image Generation"
-        description="Turn your prompt into an image."
+        description="Transforme suas ideias em imagens"
         icon={ImageIcon}
         iconColor="text-pink-700"
         bgColor="bg-pink-700/10"
@@ -160,7 +160,7 @@ const PhotoPage = () => {
               )}
             />
             <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
-              Generate
+              Gerar
             </Button>
           </form>
         </Form>

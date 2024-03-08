@@ -55,7 +55,7 @@ const ConversationPage = () => {
       if (error?.response?.status === 403) {
         proModal.onOpen();
       } else {
-        toast.error("Something went wrong.");
+        toast.error("Algo deu errado.");
       }
     } finally {
       router.refresh();
@@ -66,7 +66,7 @@ const ConversationPage = () => {
     <div>
       <Heading
         title="Chat"
-        description="Our most advanced conversation model."
+        description="Transforme suas dúvidas em chat."
         icon={MessageSquare}
         iconColor="text-violet-500"
         bgColor="bg-violet-500/10"
@@ -105,7 +105,7 @@ const ConversationPage = () => {
                 )}
               />
               <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={isLoading} size="icon">
-                Generate
+                Gerar
               </Button>
             </form>
           </Form>

@@ -45,7 +45,7 @@ const VideoPage = () => {
       if (error?.response?.status === 403) {
         proModal.onOpen();
       } else {
-        toast.error("Something went wrong.");
+        toast.error("Algo deu errado.");
       }
     } finally {
       router.refresh();
@@ -56,7 +56,7 @@ const VideoPage = () => {
     <div>
       <Heading
         title="Video Generation (Em manutenção)"
-        description="Turn your prompt into video."
+        description="Transform suas ideias em vídeo"
         icon={FileAudio}
         iconColor="text-orange-700"
         bgColor="bg-orange-700/10"
@@ -94,7 +94,7 @@ const VideoPage = () => {
               )}
             />
             <Button className="col-span-12 lg:col-span-2 w-full" type="submit" disabled={true} size="icon">
-              Generate
+              Gerar
             </Button>
           </form>
         </Form>
